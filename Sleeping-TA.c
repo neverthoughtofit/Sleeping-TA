@@ -153,7 +153,7 @@ void* ta_process()
  	}	 
  } 
  
- 
+
  void rand_sleep(void){ 
  	int time = rand() % SLEEP_MAX + 1; 
  	sleep(time); 
