@@ -1,0 +1,12 @@
+1.	Initialize semaphore and thread_count.
+2.	Create threads.
+3.	TA executes the procedure, causing him to block on the semaphore number_students_waiting because it is initially 0.
+4.	The teacher than goes to sleep. He stays asleep until the first student shows up.
+5.	When a student arrives, he execute stu_process, starting by acquiring mutex to enter a critical region.
+6.	If another student enters shortly thereafter, the second will not be able to do anything until the first one has released mutex. The student then checks to see if the number of waiting student is less than the number of chairs.
+7.	If not, he releases mutex and leaves without asking doubt.
+8.	If there is an available chair, the student increments the integer variable, waiting.
+9.	Then he does an up on the semaphore student, thus waking up the TA.
+10.	When the student releases mutex, the TA grabs it, and begins the teaching.
+11.	When the Teaching is finished, the student exits the procedure and leaves the TA room.
+12.	Process will go on From Step 5 to 11 untill ctrl+c is clicked.
