@@ -18,7 +18,7 @@ In general, to use a semaphore, the thread that wants access to the shared resou
 •	Otherwise, the thread will be blocked until a permit can be acquired.
 •	When the thread no longer needs an access to the shared resource, it releases the permit, which causes the semaphore’s count to be incremented.
 •	If there is another thread waiting for a permit, then that thread will acquire a permit at that time.
-
+ 
 •	Pthread – Pthreads are a simple and effective way of creating a multi-threaded application. This introduction to pthreads shows the basic functionality – executing two tasks in parallel and merging back into a single thread in this case ‘mutex’ when the work has been done. It’s just like making two function calls at the same time.
 
 N threads for students.
